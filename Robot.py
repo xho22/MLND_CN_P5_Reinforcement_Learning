@@ -70,10 +70,7 @@ class Robot(object):
         # Qtable[state] ={'u':xx, 'd':xx, ...}
         # If Qtable[state] already exits, then do
         # not change it.
-        if state in self.Qtable:
-            pass
-        else:
-            self.Qtable.setdefault(state, {a: 0.0 for a in self.valid_actions})
+        self.Qtable.setdefault(state, {a: 0.0 for a in self.valid_actions})
 
 
     def choose_action(self):
